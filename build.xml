@@ -1,0 +1,18 @@
+<project name="jsystemCore" default="all" basedir=".">
+	<property name="projectName" value="j2sikuli" />
+	<property environment="env" />
+	<property name="runnerRoot" value="${env.RUNNER_ROOT}" />
+	<property name="buildFilesDir" value="${runnerRoot}/dev" />
+	<property name="packageName" value="com.aqua.excel,jsystem.extensions.analyzers.csv,jsystem.extensions.analyzers.document,jsystem.extensions.analyzers.tabletext,jsystem.extensions.analyzers.text,jsystem.framework,jsystem.framework.analyzer,jsystem.framework.fixture,jsystem.framework.graph,jsystem.framework.monitor,jsystem.framework.report,jsystem.framework.sut,jsystem.framework.system,jsystem.utils,junit.framework" />
+	<import file="${buildFilesDir}/buildHelper.xml" />
+	
+	<target name="setAdditionalLibs">
+		<path id="additionalLibs">
+			<fileset dir="lib">
+				<include name="**/*.jar" />
+			</fileset>
+
+		</path>
+	</target>
+
+</project>
